@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>3D Office Portfolio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <h1>Loading Office…</h1>
+      <div class="progress-track">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="progress-label">0%</div>
+    </div>
+  </div>
+
+  <!-- Top-right controls -->
+  <div id="hud">
+    <button id="toggle-daynight" title="Toggle day / night">🌙</button>
+    <button id="toggle-sound" title="Mute / unmute">🔊</button>
+    <button id="reset-view" title="Reset camera">⤾</button>
+  </div>
+
+  <!-- Hover tooltip -->
+  <div id="tooltip"></div>
+
+  <!-- Info modal -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal">
+      <button id="modal-close">&times;</button>
+      <h2 id="modal-title">Title</h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <canvas id="scene"></canvas>
+
+  <!-- Import map so Three.js modules can be imported by bare specifier -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

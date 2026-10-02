@@ -1,0 +1,117 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #10131a;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #eef1f7;
+}
+
+#scene {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: grab;
+}
+#scene:active { cursor: grabbing; }
+#scene.hoverable { cursor: pointer; }
+
+/* ---------- Preloader ---------- */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, #1b2030, #0a0c12);
+  transition: opacity 0.6s ease;
+}
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader-inner { text-align: center; width: 320px; }
+.preloader-inner h1 { font-size: 1.1rem; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 18px; color: #b9c2d6; }
+.progress-track {
+  width: 100%; height: 6px; border-radius: 4px;
+  background: rgba(255,255,255,0.08); overflow: hidden;
+}
+#progress-bar {
+  height: 100%; width: 0%; background: linear-gradient(90deg,#5b8cff,#7ee7d1);
+  transition: width 0.2s ease;
+}
+#progress-label { margin-top: 10px; font-size: 0.8rem; color: #7d879c; }
+
+/* ---------- HUD ---------- */
+#hud {
+  position: fixed; top: 16px; right: 16px; z-index: 20;
+  display: flex; gap: 8px;
+}
+#hud button {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(20,24,34,0.65); backdrop-filter: blur(6px);
+  color: #fff; font-size: 1.1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+#hud button:hover { background: rgba(40,46,64,0.85); transform: translateY(-2px); }
+
+/* ---------- Tooltip ---------- */
+#tooltip {
+  position: fixed; z-index: 15; pointer-events: none;
+  background: rgba(15,18,26,0.9); border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 10px; border-radius: 6px; font-size: 0.8rem;
+  color: #eef1f7; display: none; transform: translate(-50%, -120%);
+  white-space: nowrap;
+}
+
+/* ---------- Modal ---------- */
+#modal-overlay {
+  position: fixed; inset: 0; z-index: 30;
+  background: rgba(6,7,11,0.72); backdrop-filter: blur(3px);
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.25s ease;
+}
+#modal-overlay.hidden { opacity: 0; pointer-events: none; }
+
+#modal {
+  width: min(560px, 92vw);
+  max-height: 82vh;
+  overflow-y: auto;
+  background: #161a24;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 28px 30px;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  transform: translateY(0);
+}
+
+#modal-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; color: #9aa4bb;
+  font-size: 1.6rem; cursor: pointer; line-height: 1;
+}
+#modal-close:hover { color: #fff; }
+
+#modal-title { margin: 0 0 14px; font-size: 1.3rem; color: #fff; }
+#modal-body { font-size: 0.95rem; line-height: 1.5; color: #c6cddc; }
+#modal-body a.btn {
+  display: inline-block; margin: 6px 8px 0 0; padding: 8px 14px;
+  background: linear-gradient(90deg,#5b8cff,#7ee7d1); color: #0a0c12;
+  border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem;
+}
+#modal-body img { max-width: 100%; border-radius: 8px; margin-top: 10px; }
+#modal-body ul { padding-left: 20px; }
+#modal-body .placeholder-note {
+  margin-top: 14px; padding: 10px 12px; border-radius: 8px;
+  background: rgba(255,193,7,0.08); border: 1px solid rgba(255,193,7,0.25);
+  color: #ffdb8a; font-size: 0.8rem;
+}
+
+.hidden { display: none !important; }
