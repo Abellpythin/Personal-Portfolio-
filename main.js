@@ -22,61 +22,61 @@ import { createSoundManager } from "./audio/soundManager.js";
 // TODO: fill in your real personal info / links / file paths here.
 // ---------------------------------------------------------------------------
 const PROFILE_LINKS = [
-  { id: "resume", icon: "📄", label: "Resume", href: "assets/documents/resume.pdf" },     // TODO: add your resume PDF
-  { id: "linkedin", icon: "💼", label: "LinkedIn", href: "https://linkedin.com/in/your-handle" }, // TODO
-  { id: "github", icon: "🐙", label: "GitHub", href: "https://github.com/your-handle" },   // TODO
-  { id: "website", icon: "🌐", label: "Website", href: "https://your-website.example" },   // TODO
+  { id: "resume", icon: "📄", label: "Resume", href: "assets/documents/Aalia_Bello-CV.pdf " },     // TODO: add your resume PDF
+  { id: "linkedin", icon: "💼", label: "LinkedIn", href: "https://www.linkedin.com/in/aalia-bello-b42352217/" }, // TODO
+  { id: "github", icon: "🐙", label: "GitHub", href: "https://github.com/Abellpythin" },   // TODO
+  //{ id: "website", icon: "🌐", label: "Website", href: "https://your-website.example" },   // TODO
 ];
 
 const DISPLAY_FRAMES = [
   {
     id: "degree",
     label: "Degree",
-    image: "assets/textures/degree.jpg", // TODO: your degree scan
+    image: "/Users/aaliabello/Documents/CAREER:Application/DEGREE.pdf", // TODO: your degree scan
     title: "Degree",
-    bodyHtml: `<p>Placeholder: replace with your actual degree image and details.</p>`,
+    bodyHtml: `<p> B.S. Computer Science </p>`,
   },
   {
-    id: "diploma",
-    label: "Diploma",
-    image: "assets/textures/diploma.jpg", // TODO
-    title: "Diploma",
-    bodyHtml: `<p>Placeholder: replace with your actual diploma image and details.</p>`,
+   //id: "diploma",
+   // label: "Diploma",
+   // image: "assets/textures/diploma.jpg", // TODO
+  //  title: "Diploma",
+  //  bodyHtml: `<p>Placeholder: replace with your actual diploma image and details.</p>`,
   },
   {
     id: "research",
     label: "Research",
-    image: "assets/textures/research.jpg", // TODO
+    image: "/Users/aaliabello/Documents/CAREER:Application/14218-54 Zhaofeng Zhang - Deep Learning Architectures for Enhanced Multimodal Brain Tumor Segmentation.pptx", // TODO
     title: "Research",
     bodyHtml: `<p>Placeholder: summarize your research work here (papers, projects, links to PDFs).</p>`,
   },
   {
-    id: "events",
-    label: "Presentations & Events",
-    image: "assets/textures/events.jpg", // TODO
-    title: "Presentations & Events",
-    bodyHtml: `<p>Placeholder: list talks, posters, and conferences you've presented at.</p>`,
+    //id: "events",
+    //label: "Presentations & Events",
+    //image: "assets/textures/events.jpg", // TODO
+    //title: "Presentations & Events",
+    //bodyHtml: `<p>Placeholder: list talks, posters, and conferences you've presented at.</p>`,
   },
   {
-    id: "honors",
-    label: "Honors",
-    image: "assets/textures/honors.jpg", // TODO
-    title: "Honors",
-    bodyHtml: `<p>Placeholder: list honors/scholarships/recognitions here.</p>`,
+    //id: "honors",
+    //label: "Honors",
+    //image: "", // TODO
+    //title: "Honors",
+   // bodyHtml: `<p>Placeholder: list honors/scholarships/recognitions here.</p>`,
   },
   {
-    id: "leadership",
-    label: "Leadership",
-    image: "assets/textures/leadership.jpg", // TODO
-    title: "Leadership",
-    bodyHtml: `<p>Placeholder: describe leadership roles and club involvement here.</p>`,
+   // id: "leadership",
+   // label: "Leadership",
+   // image: "assets/textures/leadership.jpg", // TODO
+    //title: "Leadership",
+   // bodyHtml: `<p>Placeholder: describe leadership roles and club involvement here.</p>`,
   },
   {
-    id: "awards",
-    label: "Awards",
-    image: "assets/textures/awards.jpg", // TODO
-    title: "Awards",
-    bodyHtml: `<p>Placeholder: list awards and competitions here.</p>`,
+   // id: "awards",
+   // label: "Awards",
+   // image: "assets/textures/awards.jpg", // TODO
+   // title: "Awards",
+   // bodyHtml: `<p>Placeholder: list awards and competitions here.</p>`,
   },
 ];
 
